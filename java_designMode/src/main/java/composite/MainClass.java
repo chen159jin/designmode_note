@@ -14,8 +14,8 @@ public class MainClass {
 		rootFolder.add(beifengFile);
 		
 		//ibeifeng目录
-		Folder ibeifengFolder = new Folder("ibeifeng");
-		File ibeifengFile = new File("ibeifeng.txt");
+		Folder ibeifengFolder = new Folder("dynamicProxy");
+		File ibeifengFile = new File("dynamicProxy.txt");
 		beifengFolder.add(ibeifengFolder);
 		beifengFolder.add(ibeifengFile);
 		
