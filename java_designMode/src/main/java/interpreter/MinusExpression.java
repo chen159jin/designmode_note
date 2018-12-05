@@ -1,6 +1,6 @@
 package interpreter;
 /**
- * ConcreteExpression    解释器具体实现类。
+ * ConcreteExpression    解释器具体实现类。
  * @author Jin
  *
  */
