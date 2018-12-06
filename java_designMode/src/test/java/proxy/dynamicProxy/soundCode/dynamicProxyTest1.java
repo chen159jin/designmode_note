@@ -75,7 +75,7 @@ public class dynamicProxyTest1 {
         //URLClassLoader是将硬盘中的class文件加载进入
 
         //通过Url引入本地文件
-        URL[] urls = new URL[]{new URL("file:/" + System.getProperty("user.dir") + "target/classes/test")};
+        URL[] urls = new URL[]{new URL("file:/" + System.getProperty("user.dir") + "src/main/java/test")};
         //访问本地class文件，这里我用的是IntellijIDEA,默认　　　生成的class文件的目录在  /out/production/  下
 
         //去指定路径寻找class文件
@@ -86,15 +86,15 @@ public class dynamicProxyTest1 {
         System.out.println(c);
 
         //执行
-        //c.newInstance(); 是调用空的构造方法
+//        c.newInstance(); //是调用空的构造方法
 
         //获得构造方法
         //根据java虚拟机，每一个构造方法也相当于一个对象
-        Constructor constructor = c.getConstructor(Subject.class);
+//        Constructor constructor = c.getConstructor(Subject.class);
 
         //产生新对象
-        Subject m = (Subject) constructor.newInstance(new RealSubject());  //new Tank()为构造方法的参数   即被代理对象
-
+//        Subject m = (Subject) constructor.newInstance(new RealSubject());  //new Tank()为构造方法的参数   即被代理对象
+        Subject m = (Subject) c.newInstance();
         m.sailBook();
 
     }
